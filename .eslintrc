@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "eslint:recommended",
+  ],
+  "env": {
+    "es2015": true,
+    "browser": true,
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser",
+  },
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["node_modules/", "dist/", "public/"],
+  "rules": {
+    // JavaScriptの変数使用チェックをOFF
+    "no-unused-vars": "off",
+    // TypeScriptの変数使用チェックをON
+    "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }]
+  }
+}
